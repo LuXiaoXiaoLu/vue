@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <h2>开始,{{name}}</h2>
+        <button v-on:click="showinfo">点击1</button>
+        <button @click="showinfo2(66)">点击2</button>
+    </div>
+    <script type="text/javascript">
+        function showinfo() {
+            alert('hello')
+        }
+
+        vm = new Vue({
+            el: '#root',
+            data: {
+                name: 'chp'
+            },
+            methods: {
+                showinfo() {
+                    alert('hello')
+                },
+                showinfo2(id) {
+                    console.log(id)
+                    alert('hello11')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
